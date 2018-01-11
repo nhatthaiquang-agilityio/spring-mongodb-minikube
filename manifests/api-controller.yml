@@ -1,0 +1,19 @@
+kind: "ReplicationController"
+apiVersion: "v1"
+metadata:
+  name: api-service
+spec:
+  replicas: 1
+  selector:
+    app: "api-service"
+  template:
+    spec:
+      containers:
+        - name: api-service
+          image: nhatthai/api-service:latest
+          ports:
+            - containerPort: 8080
+    metadata:
+      labels:
+        app: "api-service"
+        uses: mongo
