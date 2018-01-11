@@ -18,3 +18,10 @@ spec:
         - name: mongo
           containerPort: 27017
           hostPort: 27017
+        volumeMounts:
+        - mountPath: /data/db
+          name: mypd
+      volumes:
+        - name: mypd
+          persistentVolumeClaim:
+            claimName: myclaim-1
