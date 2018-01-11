@@ -34,6 +34,20 @@ $ docker build -t nhatthai/api-service .
 $ docker push nhatthai/api-service
 ```
 
+##### Create Persitant Volume
+```
+$ cd manifests
+$ kubectl create -f mongo-pv.yml
+$ kubectl get pv
+```
+
+##### Create Persitant Volume Claim
+```
+$ cd manifests
+$ kubectl create -f mongo-pvc.yml
+$ kubectl get pvc
+```
+
 ##### Create MongoDB Controller
 ```
 $ cd manifests
@@ -119,3 +133,5 @@ Get all student: http://mysite.com/students
 [Running a MEAN stack on Google Cloud Platform with Kubernetes](https://medium.com/google-cloud/running-a-mean-stack-on-google-cloud-platform-with-kubernetes-149ca81c2b5d)
 
 [Node.js and MongoDB on Kubernetes](https://github.com/kubernetes/examples/tree/master/staging/nodesjs-mongodb)
+
+[GET STARTED PROVISIONING STORAGE IN KUBERNETES](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux_atomic_host/7/html/getting_started_with_kubernetes/get_started_provisioning_storage_in_kubernetes)
