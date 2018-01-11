@@ -128,6 +128,18 @@ Create a student: POST http://mysite.com/student
 
 Get all student: http://mysite.com/students
 
+### Notes
+
+https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux_atomic_host/7/html/getting_started_with_kubernetes/get_started_orchestrating_containers_with_kubernetes#exploring_kubernetes_pods
+
+We can create API Service Replication Controller instead of a API Service Deployment.
+Please checkout Git branch: replication-api-service
+##### Create API Service Replication Controller
+
+```
+$ cd manifests
+$ kubectl create -f api-controller.yml
+```
 
 ### Reference
 [Running a MEAN stack on Google Cloud Platform with Kubernetes](https://medium.com/google-cloud/running-a-mean-stack-on-google-cloud-platform-with-kubernetes-149ca81c2b5d)
