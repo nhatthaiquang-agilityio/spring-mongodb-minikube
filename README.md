@@ -34,13 +34,13 @@ $ docker build -t nhatthai/api-service .
 $ docker push nhatthai/api-service
 ```
 
-##### Create MongoDB ReplicationController
+##### Create MongoDB Controller
 ```
 $ cd manifests
 $ kubectl create -f mongo-controller.yml
 ```
 
-##### Create MongoDB service
+##### Create MongoDB Service
 ```
 $ cd manifests
 $ kubectl create -f mongo-service.yml
@@ -52,13 +52,13 @@ $ cd manifests
 $ kubectl create -f api-deploy.yml
 ```
 
-##### Create API Service service
+##### Create API Service
 ```
 $ cd manifests
 $ kubectl create -f api-service.yml
 ```
 
-##### Check services
+##### Check Services
 ```
 $ kubectl describe services
 ```
