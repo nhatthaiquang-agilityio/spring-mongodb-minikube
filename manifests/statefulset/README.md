@@ -7,6 +7,7 @@ You can create Storage Classes with different provisioners depending on your Kub
 
 Minikube for local testing:
 ```
+$ cd manifests/statefulset
 $ kubectl apply -f mongo-storage.yml
 ```
 
@@ -17,6 +18,7 @@ $ kubectl get storageclass
 
 ### Creating Stateful Set
 ```
+$ cd manifests/statefulset
 $ kubectl apply -f mongo-statefulset.yaml
 ```
 
@@ -28,6 +30,7 @@ $ kubectl get statefulset
 
 ### Creating Service
 ```
+$ cd manifests/statefulset
 $ kubectl apply -f mongo-service.yaml
 ```
 
@@ -39,13 +42,6 @@ $ kubectl get pvc
 ### API Service
 Rebuild api-service.
 Recreate deploy and service.
-
-##### Connecting the MongoDB
-Each MongoDB Replica Set will have its own DNS address. This will take the format <pod-name>.<service-name> in src/main/java/resrouces/apllication.properties
-```
-spring.data.mongodb.uri=mongodb://mongo-0.mongo,mongo-1.mongo,mongo-2.mongo:27017
-```
-
 
 ### Reference
 [Running MongoDB on Kubernetes with StatefulSets](https://github.com/cvallance/mongo-k8s-sidecar/tree/master/example/StatefulSet)
