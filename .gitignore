@@ -1,5 +1,6 @@
 .settings
 .project
+.classpath
 
 # MongoDB
 data/db
